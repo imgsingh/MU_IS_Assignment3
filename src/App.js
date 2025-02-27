@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './App1.css';
 import Game from './Game';
 
 function App() {

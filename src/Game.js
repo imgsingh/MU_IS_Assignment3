@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 function Square({ value, onSquareClick }) {
     return (
-        <button className="square" onClick={onSquareClick}>
+        <button className="cell" onClick={onSquareClick}>
             {value}
         </button>
     );
@@ -83,14 +83,17 @@ export default function Game() {
     });
 
     return (
-        <div className="game">
-            <div className="game-board">
-                <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+        <>
+            <h3>This game is made by Gursimran Singh Basra (23251097).</h3>
+            <div className="game">
+                <div className="game-board">
+                    <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+                </div>
+                <div className="game-info">
+                    <ol>{moves}</ol>
+                </div>
             </div>
-            <div className="game-info">
-                <ol>{moves}</ol>
-            </div>
-        </div>
+        </>
     );
 }
 
