@@ -32,7 +32,85 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  /* Align items to the top */
+  gap: 20px;
+  /* Add space between the board and button */
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  /* Smaller cells */
+  grid-gap: 2px;
+  /* Smaller gap */
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  /* Lighter border */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  /* Smaller font */
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: #f0f0f0;
+}
+
+.cell.x {
+  color: red;
+}
+
+.cell.o {
+  color: blue;
+}
+
+.message {
+  font-size: 1em;
+  /* Smaller message */
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 10px;
+  /* Smaller button padding */
+  font-size: 0.8em;
+  /* Smaller button font */
+  cursor: pointer;
+  background-color: #f0f0f0;
+  /* Light background */
+  border: 1px solid #ccc;
+  /* Lighter border */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  /* Stack the message and button */
+  align-items: flex-start;
+  /* Align to the start */
 }
